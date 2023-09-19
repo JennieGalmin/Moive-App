@@ -20,7 +20,7 @@ useEffect(() => {
 console.log(movieList)
 
 return (
-    <div>
+    <div className="row-container">
         {movieList.map((movie)=>(
             < div className = "movie-container">
             <img 
@@ -30,10 +30,13 @@ return (
             alt={movie.title}
             style={{width:300, height:250, marginTop: 15 }}
             />
-           <h1 className="movie-title">{movie.title}</h1>
+             
+            <h1 className="movie-title">{movie.title}</h1>
+            
             </div>
             
         ))}
     </div>
 )
 }
+
