@@ -1,7 +1,8 @@
 
 import './App.css';
-import SearchMoive from './Components/SearchMovie';
-import DiscoverMovie from './Service/MovieService.js';
+import SearchMovie from './Components/SearchMovie';
+
+import {DiscoverMovie, PopularMovies, TrendingAll} from './Service/MovieService.js';
 
 
 function App (){
@@ -9,9 +10,18 @@ function App (){
 
   return (
     <div>
-  <SearchMoive />
-  <DiscoverMovie />
-  
+
+<SearchMovie />
+<button>Search Movie</button>
+
+<h1>Trending</h1>
+<TrendingAll/>
+
+<h1>Discover Movie</h1>
+  <DiscoverMovie/>
+
+<h1>Popular movies</h1>
+  <PopularMovies/>
 </div>
   );
 }

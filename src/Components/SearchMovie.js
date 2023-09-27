@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function SearchMoive(){
+export default function SearchMovie() {
 
-   return (
-   <div className="searchMovie">
-    <input/>
-    <button>Search</button>
-   </div>
-   )
+    const [search, setSearch] = useState("")
+
+    return (
+
+        <>
+        <input 
+        value = {search}
+        onChange =  {(e) => setSearch(e.target.value)}
+        />
+        </>
+
+    );
+
 }
-
-SearchMoive()
