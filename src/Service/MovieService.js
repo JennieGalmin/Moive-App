@@ -21,7 +21,7 @@ console.log(discoverMovieList)
 
 return (
     <div className="row-container">
-        {discoverMovieList.map((movie=>(
+        {discoverMovieList.map((movie =>(
             < div className = "movie-container" key={movie.id}>
             <img 
             
@@ -34,6 +34,7 @@ return (
             
             </div>
         )
+        
         ))}
     </div>
 )
@@ -114,3 +115,4 @@ export function TrendingAll (){
     
 
 }
+

@@ -1,7 +1,6 @@
 
 import './App.css';
 import SearchMovie from './Components/SearchMovie';
-
 import {DiscoverMovie, PopularMovies, TrendingAll} from './Service/MovieService.js';
 
 
@@ -12,7 +11,7 @@ function App (){
     <div>
 
 <SearchMovie />
-<button>Search Movie</button>
+
 
 <h1>Trending</h1>
 <TrendingAll/>
