@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from "react";
+import MovieList from "./MovieList"
 
 
 export default function SearchMovie() {
@@ -19,10 +19,6 @@ export default function SearchMovie() {
     }
 
 
-   /* useEffect(()=> {
-        searchMovie()
-    },[])*/
-
     console.log(results)
 
     return (
@@ -37,20 +33,20 @@ export default function SearchMovie() {
         />
         
         <button type="submit">Search Movie</button>
+
+        </form>
       
-       <div className="search-results">
-            <h2>Search Results:</h2>
-            <ul>
-                {results.map((movie) => (
-                    <li key={movie.id}>{movie.title}</li>
-                ))}
-            </ul>
-              
-           </div>
-      </form>
+        <div className="search-results">
+            <MovieList results={results}/>
+        </div>
+
         </>
 
     );
 
     }
    
+   
+    
+        
+

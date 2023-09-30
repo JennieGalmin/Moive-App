@@ -10,7 +10,11 @@ function App (){
   return (
     <div>
 
-<SearchMovie />
+      <div className="header">
+        <h1>Filmsidan</h1>
+      </div>
+
+<SearchMovie />  
 
 
 <h1>Trending</h1>
@@ -21,6 +25,9 @@ function App (){
 
 <h1>Popular movies</h1>
   <PopularMovies/>
+
+
+
 </div>
   );
 }
