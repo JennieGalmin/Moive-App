@@ -1,0 +1,15 @@
+.row-container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    cursor: pointer;
+   
+}
+
+
+.movie-title {
+    
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
