@@ -4,6 +4,7 @@ import MovieList from "./MovieList"
 
 
 
+
 export default function SearchMovie() {
 
 
@@ -24,6 +25,7 @@ export default function SearchMovie() {
 
 
 
+
     console.log(results)
 
 
@@ -35,16 +37,19 @@ export default function SearchMovie() {
         <form onSubmit={(event) => searchMovie(event)}>
            
         <input
+
         type="text"
         value={search}
         onChange = {(event) => setSearch(event.target.value)}
         />
+
        
         <button type="submit">Search Movie</button>
 
 
         </form>
      
+
         <div className="search-results">
             <MovieList results={results}/>
         </div>
@@ -61,3 +66,4 @@ export default function SearchMovie() {
    
    
        
+

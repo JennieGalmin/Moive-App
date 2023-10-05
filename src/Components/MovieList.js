@@ -9,11 +9,14 @@ export default function MovieList({results}) {
             <div className="search-results">
             {results.length > 0 && <h1>Search Results:</h1>}
             </div>
-            <div className="map">
+
+
         {results.map((searchResult) => (
             <Movie key={searchResult.id} movieData={searchResult} />
         ))}
         </div>
-        </div>
+
+       
     )
 }
+
