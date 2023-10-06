@@ -7,21 +7,16 @@ import { Link } from "react-router-dom";
 
 
 export function DiscoverMovie (){
+const [discoverMovieList, setdiscoverMovieList] = useState([]);
 
-
-
-    const [discoverMovieList, setdiscoverMovieList] = useState([])
-
-
-cba4594e309ba332ef7d950e1cc4f57ce5dba
-    const discoverMovie = ()=> {
+const discoverMovie = ()=> {
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=2661f8062eb09cb0e75e5bab0f5cee14`)
         .then(response => response.json())
         .then(json => setdiscoverMovieList(json.results))
         .catch(err=> console.error(err))
     };
 
-dba
+
 useEffect(() => {
     discoverMovie();
 }, []);
@@ -36,32 +31,29 @@ return (
         {discoverMovieList.map((movie =>(
             < div className = "movie-container" key={movie.id}>
 
-            <Link to={`./Components/MovieDetails.js/${movie.id}`}>
+            <Link to={`/MovieDetails/${movie.id}`}>
             <img
 
             src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
             alt={movie.title}
             style={{width:300, height:250, marginTop: 15 }}
             />
-             
+            </Link>
             <h1 className="movie-title">{movie.title}</h1>
-            
             </div>
         )
-        
+         
         ))}
-    </div>
-)
+   </div>
+);
 }
 
 
 export function PopularMovies(){
-
-
 const [popularMovieList, setPopularMovieList] = useState([]);
 
 
-4f57ce5dba
+
     const popularMovies = () => {
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=2661f8062eb09cb0e75e5bab0f5cee14')
         .then(response => response.json())
@@ -81,12 +73,13 @@ return (
     <div className="row-container">
     {popularMovieList.map(popularMovie => (
     < div className = "movie-container" key={popularMovie.id}>
-          <img
 
+            <img
             src={`https://image.tmdb.org/t/p/w500${popularMovie.backdrop_path}`}
             alt={popularMovie.title}
             style={{width:300, height:250, marginTop: 15 }}
             />
+            
 <h1 className="movie-title">{popularMovie.title}</h1>
 </div>
 
