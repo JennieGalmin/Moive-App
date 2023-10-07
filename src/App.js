@@ -4,33 +4,26 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from "./Pages/Home";
 import MovieDetails from './Pages/MovieDetails';
-import SearchMovie from './Components/SearchMovie';
-
-
-
+import Navbar from "./Components/Navbar";
 
 
 export default function App (){
-
   return (
- 
   <div>
-  <div className="Navbar">
-        <h1>Filmsidan</h1>
-  </div>
-<SearchMovie/>
 
+  <Navbar/>
+  
+  <Routes>
 
+    <Route
+      path="/"
+      element={<Home/>}/>
+    <Route 
+      path="/MovieDetails/:movieId"
+      element={<MovieDetails/>}/>
+    
 
-<Routes>
-
- <Route
-  path="/"
-  element={<Home/>}/>
- <Route 
- path="/MovieDetails/:movieId"
- element={<MovieDetails/>}/>
-</Routes>
+  </Routes>
 
 </div>
   );

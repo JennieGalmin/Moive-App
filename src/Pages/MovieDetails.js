@@ -1,7 +1,7 @@
 import React from "react";
-import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
-
+import "./MovieDetails.css";
 
 
 export default function MovieDetails(){
@@ -25,7 +25,7 @@ useEffect(() => {
 
 return ( 
   <div>
-   
+    <div className="moviedetails-container">
     {movieDetails && (
         <div> 
         <img
@@ -42,7 +42,7 @@ return (
         </div>
         </div>
     )}
-    
+    </div>
   </div>
    
 );

@@ -73,13 +73,13 @@ return (
     <div className="row-container">
     {popularMovieList.map(popularMovie => (
     < div className = "movie-container" key={popularMovie.id}>
-
+            <Link to={`/MovieDetails/${popularMovie.id}`}>
             <img
             src={`https://image.tmdb.org/t/p/w500${popularMovie.backdrop_path}`}
             alt={popularMovie.title}
             style={{width:300, height:250, marginTop: 15 }}
             />
-            
+            </Link>
 <h1 className="movie-title">{popularMovie.title}</h1>
 </div>
 
@@ -124,12 +124,13 @@ export function TrendingAll (){
         <div className="row-container">
     {trending.map(trendingList => (
     < div className = "movie-container" key={trendingList.id}>
-
+        <Link to={`/MovieDetails/${trendingList.id}`}>
           <img
             src={`https://image.tmdb.org/t/p/w500${trendingList.backdrop_path}`}
             alt={trendingList.title}
             style={{width:300, height:250, marginTop: 15 }}
             />
+            </Link>
 <h1 className="movie-title">{trendingList.title}{trendingList.name}</h1>
 </div>
 

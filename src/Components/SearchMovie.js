@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import MovieList from "./MovieList"
-
-
-
-
+import MovieList from "../Pages/MovieList"
 
 export default function SearchMovie() {
 
@@ -23,21 +19,15 @@ export default function SearchMovie() {
     }
 
 
-
-
-
     console.log(results)
 
 
     return (
-
-
         <>
        
         <form onSubmit={(event) => searchMovie(event)}>
            
         <input
-
         type="text"
         value={search}
         onChange = {(event) => setSearch(event.target.value)}

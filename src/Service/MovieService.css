@@ -1,17 +1,25 @@
+
 .row-container {
     display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: space-between;
     cursor: pointer;
+    margin-top:50px;
    
 }
 
 
 .movie-title {
     
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 
 
+.movie-container{
+    
+    
+    margin-left:30px;
+
+}
